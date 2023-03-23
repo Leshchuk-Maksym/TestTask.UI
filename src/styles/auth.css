@@ -1,0 +1,32 @@
+.auth_outer_div{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auth_div{
+    position: absolute;
+    left: calc((100vh-450px)/2);
+    top: 20%;
+    text-align: center;
+    border: 1px solid black;
+    height: fit-content;
+    width: 450px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 3%;
+
+}
+.input_auth{
+    width: 90%;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.auth_button{
+    background-color: beige;
+    width: 40%;
+    height: 35px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 5px;
+}
