@@ -1,0 +1,36 @@
+.curr_test_outer .test_item_div{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.curr_test_outer .start_div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.curr_test_outer button{
+    width: 50px;
+    height: 50%;
+    padding: 7px;
+    margin: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+    min-width: fit-content;
+}
+.test_item_div button{
+    margin-left: 0px;
+}
+.question_div{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+

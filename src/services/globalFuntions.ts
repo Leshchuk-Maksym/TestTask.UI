@@ -22,10 +22,10 @@ export default class GlobalFunctions {
     static getCred = () => {
         let token = GlobalFunctions.getCookie("token");
         if (token === null) {
-            return null;
+            return [null];
         }
         let decodedJwt: JwtClaims = jwt<JwtClaims>(token);
         console.log(decodedJwt);
-        return decodedJwt.unique_name;
+        return [decodedJwt.unique_name, decodedJwt.nameid];
     };
 }

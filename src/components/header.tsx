@@ -3,10 +3,17 @@ import UserService from "../services/userService";
 import "../styles/header.css";
 
 const Header = () => {
-    const username = GlobalFunctions.getCred();
+    const cred = GlobalFunctions.getCred();
+
+    
+    const username = cred![0];
+    
 
     return (
         <header>
+            <div className='header-left'>
+                <button onClick={(e) => GlobalFunctions.Redirection("/tests")}>Tests</button>
+            </div>
             <div className='header-right'>
                 {username !== null && (
                     <div className='header_auth'>

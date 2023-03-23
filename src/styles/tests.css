@@ -1,0 +1,36 @@
+.outer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.test_item_div{
+    background-color: beige;
+    width: fit-content;
+    min-width: 400px;
+    height: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.test_item_div button{
+    width: 30%;
+    height: 30px;
+    padding: 7px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.tests_box{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    row-gap: 20px;
+}
+#title{
+    margin: 20px;
+}

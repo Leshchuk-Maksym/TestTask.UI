@@ -16,16 +16,18 @@ export default class UserService {
             .catch((err) => {
                 return err;
             });
+        GlobalFunctions.Redirection("/tests");
     }
 
     static async register(username: string, email: string, password: string) {
-        API.post("/User/register", { username, email, password })
+        await API.post("/User/register", { username, email, password })
             .then((resp) => {
                 document.cookie = `token=${resp.data.token}`;
             })
             .catch((err) => {
                 alert(err);
             });
+        GlobalFunctions.Redirection("tests");
     }
 
     static async logout() {

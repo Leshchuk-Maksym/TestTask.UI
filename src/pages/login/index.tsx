@@ -1,13 +1,10 @@
 import { useState } from "react";
 import UserService from "../../services/userService";
-import TestService from "../../services/testService";
 import "../../styles/auth.css";
 
 function LoginPage() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    // const [passwordError, setPasswordError] = useState("");
-    // const [usernameError, setUsernameError] = useState("");
 
     const handleChangeInput = async (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();

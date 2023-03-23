@@ -1,6 +1,5 @@
 import { useState } from "react";
 import UserService from "../../services/userService";
-import TestService from "../../services/testService";
 import "../../styles/auth.css";
 
 function RegisterPage() {
