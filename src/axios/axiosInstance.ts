@@ -11,7 +11,7 @@ API.interceptors.request.use(function (config) {
     const token = GlobalFunctions.getCookie("token");
 
     if (token !== null) {
-        config.headers.Authorization = token;
+        config.headers.Authorization = "Bearer " + token;
     }
 
     return config;
