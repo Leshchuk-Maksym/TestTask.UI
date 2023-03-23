@@ -21,7 +21,10 @@ const TestsComponent = () => {
     return (
         <div className='outer'>
             <h1 id='title'>Avalible tests:</h1>
+
             <div className='tests_box'>
+                {isLoading && <h2>Loading...</h2>}
+                {errorMessage && <h2>{errorMessage}</h2>}
                 {data &&
                     !isLoading &&
                     data.map((test: Test) => (

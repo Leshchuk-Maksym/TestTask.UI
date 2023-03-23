@@ -6,6 +6,7 @@ import "../../../styles/tests.css";
 import "../../../styles/currTest.css";
 import TestService from "../../../services/testService";
 import { Link } from "react-router-dom";
+import { Http2ServerRequest } from "http2";
 
 interface TestProps {
     id: number;
@@ -38,6 +39,9 @@ export const CurrentTestComponent = (props: TestProps) => {
 
     return (
         <div className='curr_test_outer'>
+            {isLoading && <h2>Loading...</h2>}
+            {errorMessage && <h2>{errorMessage}</h2>}
+
             {data && !isLoading && (
                 <div className='test_item_div'>
                     <Link to={"/tests"}>
