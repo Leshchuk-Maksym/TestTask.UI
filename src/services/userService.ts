@@ -10,11 +10,10 @@ export default class UserService {
             password: password,
         })
             .then((resp) => {
-                console.log(resp.data.token);
                 document.cookie = `token=${resp.data.token}`;
             })
             .catch((err) => {
-                return err;
+                alert(err.response.data);
             });
         GlobalFunctions.Redirection("/tests");
     }
@@ -25,7 +24,7 @@ export default class UserService {
                 document.cookie = `token=${resp.data.token}`;
             })
             .catch((err) => {
-                alert(err);
+                alert(err.response.data);
             });
         GlobalFunctions.Redirection("tests");
     }
