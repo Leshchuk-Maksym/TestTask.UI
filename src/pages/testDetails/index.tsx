@@ -7,7 +7,6 @@ type RouteParams = {
 
 export default function CurrentTestPage() {
     const params = useParams<RouteParams>();
-    console.log(params.testId);
 
     return (
         <div>

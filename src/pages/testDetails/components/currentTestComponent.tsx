@@ -34,7 +34,6 @@ export const CurrentTestComponent = (props: TestProps) => {
 
     useEffect(() => {
         dispatch(fetchCurrentData(id));
-        console.log("dispached ");
     }, [start]);
 
     return (
@@ -93,7 +92,7 @@ export const CurrentTestComponent = (props: TestProps) => {
                     <br />
                     <div>
                         {data!.questions[currentQuestion].answers!.map((answer) => (
-                            <div>
+                            <div key={answer.id}>
                                 <input
                                     type='radio'
                                     name='answer'
@@ -116,7 +115,7 @@ export const CurrentTestComponent = (props: TestProps) => {
                                         ...userAnswers,
                                         currentAnswer,
                                     ]);
-                                    console.log(res);
+
                                     setResult(res);
                                     setCurrentAnswer(0);
                                     setUserAnswers([]);

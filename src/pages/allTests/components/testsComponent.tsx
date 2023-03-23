@@ -17,7 +17,7 @@ const TestsComponent = () => {
     useEffect(() => {
         dispatch(fetchData(userId));
     }, []);
-    console.log(data);
+
     return (
         <div className='outer'>
             <h1 id='title'>Avalible tests:</h1>
@@ -28,7 +28,7 @@ const TestsComponent = () => {
                 {data &&
                     !isLoading &&
                     data.map((test: Test) => (
-                        <div className='test_item_div'>
+                        <div key={test.id} className='test_item_div'>
                             <h3>
                                 {test.id}. {test.name}
                             </h3>

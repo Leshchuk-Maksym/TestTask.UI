@@ -25,7 +25,6 @@ export default class GlobalFunctions {
             return [null];
         }
         let decodedJwt: JwtClaims = jwt<JwtClaims>(token);
-        console.log(decodedJwt);
         return [decodedJwt.unique_name, decodedJwt.nameid];
     };
 }
