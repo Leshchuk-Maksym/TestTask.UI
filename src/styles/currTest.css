@@ -26,6 +26,18 @@
 .test_item_div button{
     margin-left: 0px;
 }
+
+.start_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.start_div button{
+    margin-left: 10px;
+}
+
+
 .question_div{
     width: 95%;
     margin: auto;
